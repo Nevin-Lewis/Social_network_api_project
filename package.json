@@ -1,0 +1,24 @@
+{
+  "name": "social_network_api_project",
+  "version": "1.0.0",
+  "description": "Social network project UT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nevin-Lewis/Social_network_api_project.git"
+  },
+  "author": "Nevin Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nevin-Lewis/Social_network_api_project/issues"
+  },
+  "homepage": "https://github.com/Nevin-Lewis/Social_network_api_project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0"
+  }
+}
