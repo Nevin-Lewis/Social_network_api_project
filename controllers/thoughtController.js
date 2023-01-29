@@ -3,7 +3,7 @@ const { User, Thought } = require("../models");
 module.exports = {
   getThoughts(req, res) {
     Thought.find()
-      .then((thoughts) => res.json)(thoughts)
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
   getSingleThought(req, res) {
@@ -17,7 +17,16 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   postThought(req, res) {
-    Thought.create(req.body);
+    Thought.create(req.body)
+      .then(
+        (thought) => res.json(thought),
+        User.findOneAndUpdate(
+          { userId: req.body.userId },
+          { $push: { thoughts: req.body } },
+          { new: true }
+        )
+      )
+      .catch((err) => res.status(500).json(err));
   },
   updateThought(req, res) {
     Thought.findOneAndUpdate(
