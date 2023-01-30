@@ -18,7 +18,7 @@ This is the readme for the social network API project. This projhect allows the 
 To install necessary depnedencies, run the follow commands in the terminal of your desired folder:
 
 ```
-git clone https://github.com/Nevin-Lewis/movie_theater_database.git
+git clone git@github.com:Nevin-Lewis/Social_network_api_project.git
 ```
 Then navigate into the cloned folder and run:
 
