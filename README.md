@@ -3,7 +3,7 @@
     
     
 ## Description
-    
+This is the readme for the social network API project. This projhect allows the user to add friends, post thoughts and add reactions to others posts. This is strictly the back-end API for the social network. The user can interact with this through Insomnia. They can add, edit and delete their own thoughts. The user can add friends and add reactions to other users thoughts. They can also delete friends, or their previous reactions. 
 
 
 ## Table of Contents
@@ -15,13 +15,25 @@
 * [Questions](#questions)
 
 ## Installation
-To install necessary depnedencies, run the follow commands:
+To install necessary depnedencies, run the follow commands in the terminal of your desired folder:
 
 ```
+git clone https://github.com/Nevin-Lewis/movie_theater_database.git
+```
+Then navigate into the cloned folder and run:
 
 ```
-
+npm i
+```
+      
 ## Usage
+To start this program from the Social_network_api_project folder terminal run
+
+```
+npm start
+```
+
+Open insomnia and interact with the application through the terminal
 
 
 ## License
@@ -44,12 +56,13 @@ MIT License
 
 ## Contributing
 
+Feel free to copy, or fork this repo. Make any changes that you would like and use it freely.
 
 ## Test
-To run tess, run the following command:
+To run test, run the following command:
 
 ```
-
+N/A
 ```
 
 ## Questions
