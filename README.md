@@ -33,7 +33,9 @@ To start this program from the Social_network_api_project folder terminal run
 npm start
 ```
 
-Open insomnia and interact with the application through the terminal
+Open insomnia and interact with the application through the terminal.
+
+Add and interact with the data as desired.
 
 
 ## License
