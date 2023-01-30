@@ -48,7 +48,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   deleteThought(req, res) {
-    Thought.findOneAndDelete({ _id: req.params.thoughtId })
+    Thought.findOneAndRemove({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: "No thought with that ID" })
@@ -58,8 +58,16 @@ module.exports = {
               { new: true }
             )
       )
-      .then(() => res.json({ message: "Thought deleted" }))
-      .catch((err) => res.status(500).json(err));
+      .then((user) =>
+        !user
+          ? res
+              .status(404)
+              .json({ message: "Thought deleted, but no user found" })
+          : res.json({ message: "Thought and user successfully deleted" })
+      )
+      .catch((err) => {
+        res.status(500);
+      });
   },
   postReaction(req, res) {
     console.log("You are adding a reaction");

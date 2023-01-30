@@ -40,7 +40,7 @@ module.exports = {
               .json({ message: "User Deleted, but no thoughts found" })
           : res.json({ message: "User and Thoughts deleted!" })
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => res.status(500));
   },
   updateUser(req, res) {
     User.findOneAndUpdate(
