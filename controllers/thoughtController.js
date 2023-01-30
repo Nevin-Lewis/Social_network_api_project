@@ -20,7 +20,7 @@ module.exports = {
     Thought.create(req.body)
       .then((thought) => {
         return User.findOneAndUpdate(
-          { userId: req.body.userId },
+          { _id: req.body.userId },
           { $addToSet: { thoughts: thought } },
           { new: true }
         );
@@ -63,7 +63,7 @@ module.exports = {
           ? res
               .status(404)
               .json({ message: "Thought deleted, but no user found" })
-          : res.json({ message: "Thought and user successfully deleted" })
+          : res.json({ message: "Thoughts successfully deleted" })
       )
       .catch((err) => {
         res.status(500);
